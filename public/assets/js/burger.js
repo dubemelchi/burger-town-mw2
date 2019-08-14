@@ -1,4 +1,4 @@
-const ORM = require("../../orm");
+const ORM = require("../../../config/orm");
 
 const burger = {
   select: (cb) => {
