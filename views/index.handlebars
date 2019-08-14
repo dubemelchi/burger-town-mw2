@@ -1,0 +1,58 @@
+<header>
+    <h1 id="header">Defend Burger Town!</h1>
+    <br>
+
+    <h2 class="sub-header">Ramirez! Get to Burger Town, NOW!</h2>
+    <br>
+    <div id="bob-pic">
+        <img style="width:400px;height:250px;" src="" />
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="row">
+        <h1 class="sub-header">Burgers</h1>
+    </div>
+    <div class="card col-md-5">
+        <h3 class="card-title sub-header" id="not-devoured">Available</h3>
+        <div class="card-body">
+            <ul>
+                <li>
+                    {{#each burger}}
+                    {{#unless devoured}}
+                    <p>
+                        {{burger_name}}
+                    </p>
+                    <button type="button" class="devour" data-id="{{id}}">Devour</button>
+                    {{/unless}}
+                    {{/each}}
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card col-md-5 devoured">
+        <h3 class="card-title sub-header" id="devoured">Devoured</h3>
+        <div class="card-body">
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                <p>
+                    {{burger_name}}
+                </p>
+                <button type="submit">Make Another</button>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <div class="sub-header">something witty here!</div>
+    <form id="burgers">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Add Your Burger!">
+        </div>
+        <button type="submit">subrit</button>
+    </form>
+</div>
