@@ -14,7 +14,7 @@ const ORM = {
   });
  },
 
- create: (tabel, column, value) => {
+ create: (table, column, value) => {
   let insertQuery = " INSERT INTO ?? (??) VALUES(?)"
 
   connection.query(insertQuery, [table, column, value], (err, result) => {
