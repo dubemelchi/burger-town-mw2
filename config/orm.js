@@ -1,5 +1,5 @@
 // import mysql connection
-const connection = require("connection.js");
+const connection = require("../config/connection");
 
 const ORM = {
  select: (table, cb) => {
@@ -9,7 +9,7 @@ const ORM = {
    if (err) {
     throw err;
    }
-   console.log(results;
+   console.log(results);
    cb(result);
   });
  },

@@ -3,7 +3,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 //display content
-app.use(express.statec("public"));
+app.use(express.static("public"));
 
 app.use(express.urlencoded({
   extended: true
