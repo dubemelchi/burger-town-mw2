@@ -9,7 +9,7 @@ const ORM = {
    if (err) {
     throw err;
    }
-   console.log(results);
+   console.log(result);
    cb(result);
   });
  },
@@ -50,4 +50,4 @@ const ORM = {
  
 }
 
-module.exports = orm;
+module.exports = ORM;
