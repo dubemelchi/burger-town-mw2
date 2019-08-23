@@ -5,23 +5,23 @@ const ORM = {
  select: (table, cb) => {
   let query = "SELECT * FROM ??";
 
-  connection.query(query, [table], (err, result) => {
+  connection.query(query, [table], (err, results) => {
    if (err) {
     throw err;
    }
-   console.log(result);
-   cb(result);
+   console.log(results);
+   cb(results);
   });
  },
 
  create: (table, column, value) => {
   let insertQuery = " INSERT INTO ?? (??) VALUES(?)"
 
-  connection.query(insertQuery, [table, column, value], (err, result) => {
+  connection.query(insertQuery, [table, column, value], (err, results) => {
    if (err) {
     throw err;
    }
-   console.log(result);
+   console.log(results);
 
   });
  },
@@ -29,22 +29,22 @@ const ORM = {
  update: (table, column, newVal, whereCol, whereVal) => {
   let updateQuery = "UPDATE ?? SET ?? = ? WHERE ?? = ?"
 
-  connection.query(updateQuery, [table, column, newVal, whereCol, whereVal], (err, result) => {
+  connection.query(updateQuery, [table, column, newVal, whereCol, whereVal], (err, results) => {
    if (err) {
     throw err;
    }
-   console.log(result)
+   console.log(results)
   });
  },
 
  delete: (table, column, value) => {
    let deleteQuery = "DELETE FROM ?? WHERE ?? = ?"
 
-   connection.query(deleteQuery, [table, column, value], (err, result) => {
+   connection.query(deleteQuery, [table, column, value], (err, results) => {
      if (err) {
        throw err;
      }
-     console.log(result);
+     console.log(results);
    });
  },
  

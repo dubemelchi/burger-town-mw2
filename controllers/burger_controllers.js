@@ -24,7 +24,7 @@ router.get("/api/burger", (req, res) => {
   });
 });
 
-router.put("/api/burger/:id", (re, res) => {
+router.put("/api/burger/:id", (req, res) => {
   let status = Boolean(req.body.devoured);
 
   burger.update("devoured", status, "id", req.params.id, (result) => {
