@@ -50,4 +50,4 @@ const ORM = {
  
 }
 
-module.exports = orm;
+module.exports = ORM;
